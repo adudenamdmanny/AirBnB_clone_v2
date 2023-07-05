@@ -6,13 +6,15 @@ from fabric.contrib import files
 import os
 
 
-api.env.hosts = ['52.91.154.135', '54.87.207.246']
+api.env.hosts = ['100.25.12.255', '18.207.1.80']
 api.env.user = 'ubuntu'
-api.env.key_filename = '~/.ssh/alx_server'
+api.env.key_filename = '~/.ssh/authorized_keys'
 
 
 def do_deploy(archive_path):
     """Function to transfer `archive_path` to web servers.
+.env.key_filename = '~/.ssh/authorized_keys'
+
     Args:
         archive_path (str): path of the .tgz file to transfer
     Returns: True on success, False otherwise.
